@@ -16,11 +16,6 @@ best_buy_items =[
     'department': 'Phones'
 },
 
-{
-    'name': 'Samsung Galaxy s27',
-    'price': '$799'
-    'department': 'Phone'
-}
 ]
 
-print(best_buy_items[1]['name'])
+print(best_buy_items[0]['price'])
