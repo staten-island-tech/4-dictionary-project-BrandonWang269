@@ -34,6 +34,11 @@ best_buy_items = [
     'department': 'Airpod'
 }
 ]
+print("Which one would you like to buy? Please purchase 1.")
+done = False
 for index, item in enumerate(best_buy_items):
     print(index, ':', item['name'])
-    
+    if done is False:
+        print('Would you like to continue')
+    elif done is True:
+        print('Here is your items and total')
