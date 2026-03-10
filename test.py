@@ -34,11 +34,25 @@ best_buy_items = [
     'department': 'Airpod'
 }
 ]
+
 print("Which one would you like to buy? Please purchase 1.")
+cart = []
+total = 0
 done = False
-for index, item in enumerate(best_buy_items):
-    print(index, ':', item['name'])
-    if done is False:
-        print('Would you like to continue')
-    elif done is True:
-        print('Here is your items and total')
+while not done:
+    for index, item in enumerate(best_buy_items):
+        print(index, ':', item['name'])
+        print(index, ':', item['price'])
+    choice = int(input("Pick a number: "))
+    item = best_buy_items[choice]
+    cart += [item['name']]
+    total += float(item['price'])
+    done = input("Are you done? (y or n)")
+    if done == 'y':
+        done == True
+    else:
+        done == False
+        if done == True:
+            break
+    print('Items purchased.', cart)
+    print('Total cost. $', total)
